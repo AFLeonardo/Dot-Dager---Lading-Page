@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    position: relative;
+    text-align: left; /* Cambiar la alineación del texto */
+    color: white;
+    height: 500px; /* Ajustar la altura según la imagen original */
+    overflow: hidden;
+    display: flex; /* Permite controlar la posición del contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding-left: 2rem; /* Agrega espacio a la izquierda */
+}
+
+header::before {
+    content: "";
+    background: url('imagen/DagerPan.jpg') no-repeat center center;
+    background-size: cover; /* Asegura que la imagen esté completamente visible */
+    background-color: black; /* Agrega un color de fondo en caso de que haya espacios vacíos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+
+header h1 {
+    margin: 2rem;
+    font-size: 5rem; /* Aumenta el tamaño del texto */
+    font-family: 'Orbitron';
+    color: yellow;
+}
+
+header p {
+    font-size: 2rem;
+    padding-inline: 2rem;
+    font-style: italic;
+    font-family: 'Orbitron';
+    font-style: italic;
+}
+
+
+section {
+    padding: 2rem;
+}
+
+#about img {
+    width: 1000px;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+#skills {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+.skill {
+    background-color: #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#contact input,
+#contact textarea {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.pepino {
+    width: 50px; /* Ancho deseado */
+    height: 50px; /* Altura deseada */
+    position: absolute;
+    background-image: url(imagen/pepino.png);
+    background-size: contain; /* Ajustar la imagen para que se muestre completa */
+    background-repeat: no-repeat; /* Evitar que se repita */
+    background-position: center; /* Centrar la imagen dentro del contenedor */
+  }
+  
+  
