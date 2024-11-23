@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Efecto de escribir
     const frases = [
         "Programador",
         "Gusto por la filosofía",
@@ -35,9 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     escribir();
 
-    // Crear pepino
     const header = document.querySelector("header");
-    const tronarSonido = new Audio("Tronar.mp3"); // Reemplaza con la ruta de tu sonido
+    const tronarSonido = new Audio("Tronar.mp3"); 
 
     function crearPepino() {
         const pepino = document.createElement("div");
@@ -67,16 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         pepino.addEventListener("click", () => {
-            // Reproduce el sonido
+            
             tronarSonido.currentTime = 0;
             tronarSonido.play();
 
-            // Añade un efecto visual (por ejemplo, cambio de color o animación)
+            
             pepino.style.transition = "transform 0.3s ease, opacity 0.3s ease";
             pepino.style.transform = "scale(0)";
             pepino.style.opacity = "0";
 
-            // Elimina el pepino después de la animación
             setTimeout(() => {
                 pepino.remove();
             }, 300);
@@ -87,14 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(crearPepino, 850);
 
-    // Reproducción de sonido al hacer hover en imágenes
     const images = document.querySelectorAll("#galeria img");
     const hoverSound = document.getElementById("hover-sound");
 
     images.forEach((image) => {
         image.addEventListener("mouseenter", () => {
             hoverSound.pause();
-            hoverSound.currentTime = 0; // Vuelve al inicio del sonido
+            hoverSound.currentTime = 0;
             hoverSound.play();
         });
     });
