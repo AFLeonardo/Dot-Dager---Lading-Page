@@ -95,3 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+window.addEventListener('load', function() {
+    const audio = document.getElementById('background-audio');
+    audio.play();
+  });
+  
