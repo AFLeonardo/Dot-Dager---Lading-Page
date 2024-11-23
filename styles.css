@@ -1,11 +1,13 @@
+/* Reseteo de márgenes y fuente base */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Estilos de la barra de navegación */
 nav {
-    background-color: #333;
+    background-color: #221E22;
     color: #fff;
     display: flex;
     justify-content: space-around;
@@ -18,22 +20,28 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Estilos del encabezado */
 header {
     position: relative;
-    text-align: left; /* Cambiar la alineación del texto */
+    text-align: left;
     color: white;
-    height: 500px; /* Ajustar la altura según la imagen original */
+    height: 700px;
     overflow: hidden;
-    display: flex; /* Permite controlar la posición del contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    padding-left: 2rem; /* Agrega espacio a la izquierda */
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
 }
 
 header::before {
     content: "";
     background: url('imagen/DagerPan.jpg') no-repeat center center;
-    background-size: cover; /* Asegura que la imagen esté completamente visible */
-    background-color: black; /* Agrega un color de fondo en caso de que haya espacios vacíos */
+    background-size: cover;
+    background-color: black;
     position: absolute;
     top: 0;
     left: 0;
@@ -42,78 +50,261 @@ header::before {
     z-index: -1;
 }
 
-
-
 header h1 {
     margin: 2rem;
-    font-size: 5rem; /* Aumenta el tamaño del texto */
-    font-family: 'Orbitron';
+    font-size: 5rem;
+    font-family: 'Orbitron', sans-serif;
     color: yellow;
 }
 
 header p {
     font-size: 2rem;
     padding-inline: 2rem;
+    font-family: 'Orbitron', sans-serif;
     font-style: italic;
-    font-family: 'Orbitron';
-    font-style: italic;
+    color: moccasin;
 }
 
-
+/* Sección general */
 section {
     padding: 2rem;
 }
 
-#about img {
-    width: 1000px;
-    border-radius: 50%;
-    margin-top: 1rem;
+/* Sección 'Sobre mí' */
+#about {
+    background-color: #44355B;
+    color: #fff;
+    padding: 2rem;
+    position: relative;
+    min-height: 600px;
+    display: flex; /* Añadido para alinear los elementos de forma horizontal */
+    flex-wrap: wrap; /* Añadido para permitir que los elementos se ajusten en pantallas pequeñas */
+    gap: 2rem; /* Añadido para espacio entre los elementos */
+    justify-content: space-between;
 }
 
-#skills {
+/* Contenedor de la sección 'Sobre mí' */
+.about-container {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Estilo para el texto */
+  .about-text {
+    flex: 1;
+    font-size: larger;
+    font-weight: 500;
+  }
+
+  .about-text h2{
+    font-size: 2.5rem;
+  }
+  
+  /* Estilo para la galería */
+  .about-gallery {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Alinea las imágenes en una columna */
+  }
+
+
+#about h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ECA72C;
+    background: #44355B; /* Fondo sólido sin gradiente */
+    padding: 1rem;
 }
 
-.skill {
-    background-color: #ddd;
-    padding: 1rem;
-    border-radius: 5px;
-    width: 100px;
+/* Estilos de la galería */
+#galeria {
+    display: flex;
+    width: 750px;
+    height: 380px;
+    margin-left: 2rem; /* Añade espacio entre el texto y la galería */
+}
+
+#galeria img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+
+#galeria img:hover {
+    cursor: crosshair;
+    width: 500px;
+    opacity: 1;
+    filter: contrast(120%);
+    box-shadow: #ECA72C 0px 0px 0px 3px;
+}
+
+/* Video debajo del texto */
+.about-video {
+    width: 50%;
+    margin: 0 auto; /* Centra el video horizontalmente */
+    border-radius: 10px;
+    display: block; /* Asegura que el video se trate como un bloque */
+    justify-content: center; /* Centra horizontalmente */
+  }
+  
+
+/* Sección de contacto */
+#contact {
+    padding: 2rem;
     text-align: center;
 }
 
-#contact form {
+#contact h2 {
+    font-size: 2rem;
+}
+
+.contact-links {
     display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-#contact input,
-#contact textarea {
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    font-size: 1rem;
+.contact-links a {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    gap: 10px;
 }
 
+.contact-links a:hover {
+    color: #ffcc00 !important;
+    font-size: 3rem !important; 
+    transition: .8s;
+}
+
+.contact-links img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Estilos para el pie de página */
 footer {
-    background-color: #333;
+    background-color: #221E22;
     color: #fff;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
 }
 
+/* Clase para el efecto de brillo del pepino */
 .pepino {
-    width: 50px; /* Ancho deseado */
-    height: 50px; /* Altura deseada */
+    width: 50px;
+    height: 50px;
     position: absolute;
     background-image: url(imagen/pepino.png);
-    background-size: contain; /* Ajustar la imagen para que se muestre completa */
-    background-repeat: no-repeat; /* Evitar que se repita */
-    background-position: center; /* Centrar la imagen dentro del contenedor */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+/* Clase para disposición de texto y otras secciones */
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.texto {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0.5rem;
+    justify-content: right;
+    opacity: .8;
   }
   
+  .skill-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
   
+  .skill-category h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-family: 'Orbitron';
+  }
+  
+  .elemento {
+    border: 1px solid black;
+    background-color: #221E22;
+    color: #ECA72C;
+    font-family: 'Orbitron';
+    font-weight: bold;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    margin: 0.5rem;
+  }
+
+  .elemento:hover {
+    box-shadow: 0 0 15px 5px #ffcc00; /* Ajusta los valores para el brillo */
+    transition: box-shadow 0.3s ease-in-out; /* Para que sea un efecto suave */
+}
+
+  #habilidades {
+    background-image: url(imagen/DagerPapeleo.jpg);
+    background-size: cover;
+    padding: 2rem;
+    
+  }
+  
+section h3 {
+    text-align: right;
+    font-family: 'Orbitron';
+    font-size: 3rem;
+    color: #D1D646;
+}
+
+#contact {
+    background-color: #221E22;
+    color: white;
+}
+
+#contact a {
+    color: white;
+}
+
+.parafo {
+    text-indent: 2rem !important;
+    margin: 1rem;
+}
+
+.recordatorio {
+    font-size: 2rem;
+    color: #D1D646;
+}
+
+.recordatorio:hover {
+    font-size: 2.7rem;
+    font-weight: 500;
+    transition: 3s;
+}

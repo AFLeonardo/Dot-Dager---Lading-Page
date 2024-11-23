@@ -8,59 +8,129 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-  <script src="funciones.js"></script>
+  <script src="funciones.js" defer></script>
+  <link rel="icon" href="imagen/Dager.png" type="image/png">
+  <audio autoplay loop>
+    <source src="Canto.mp3" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
 </head>
 <body>
+  <audio id="hover-sound" src="hoja.mp3" preload="auto"></audio>
+  
+  
   <!-- Barra de navegación -->
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#about">Sobre mí</a>
+    <a href="#habilidades">Skills</a>
     <a href="#contact">Contacto</a>
   </nav>
   
-  <!-- Encabezado -->
-  <header id="inicio">
-    <h1>Dot Dager</h1>
-    <p id="efecto-escribir"></p>
-  </header>
+  <main>
+    <!-- Encabezado -->
+    <header id="inicio">
+      <h1>Dot Dager</h1>
+      <p id="efecto-escribir"></p>
+    </header>
 
-  <!-- Sección: Sobre mí -->
-  <section id="about">
-    <h2>Sobre mí...</h2>
-    <p>
-      Creador de contenido apasionado por el desarrollo web y la tecnología. Mi misión principal 
-      es ayudar a otros a aprender programación de una manera accesible y práctica, compartiendo 
-      mis experiencias y conocimientos sobre cómo ingresar y crecer en el mundo del desarrollo de software.
-    </p>
-    <p>
-      Mi contenido se centra en consejos para principiantes, tutoriales técnicos, y estrategias 
-      para mejorar habilidades y conseguir el primer empleo como programador. Me encanta desmitificar 
-      la idea de que la programación es inaccesible o complicada, porque creo firmemente que cualquiera 
-      puede aprender con dedicación y guía adecuada.
-    </p>
-    <img src="imagen/DagerBarba.png" alt="Mi foto">
-    <h3>Skills</h3>
-    <div id="skills">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-    </div>
-  </section>
+    <!-- Sección: Sobre mí -->
+    <section id="about">
+      <div class="about-container">
+        <!-- Contenedor de texto a la izquierda -->
+        <div class="about-text">
+          <h2>Sobre mí...</h2>
+          <p class="parafo">
+            Creador de contenido apasionado por el desarrollo web y la tecnología. Mi misión principal
+            es ayudar a otros a aprender programación de una manera accesible y práctica, compartiendo
+            mis experiencias y conocimientos sobre cómo ingresar y crecer en el mundo del desarrollo de software.
+          </p>
+          <p class="parafo">
+            Mi contenido se centra en consejos para principiantes, tutoriales técnicos, y estrategias
+            para mejorar habilidades y conseguir el primer empleo como programador. Me encanta desmitificar
+            la idea de que la programación es inaccesible o complicada, porque creo firmemente que cualquiera
+            puede aprender con dedicación y guía adecuada.
+          </p>
+        </div>
+        
+        <!-- Galería a la derecha -->
+        <div class="about-gallery">
+          <section id="galeria">
+            <img src="imagen/DagerBarba.png" alt="Dager Barbon posando para la cámara">
+            <img src="imagen/DagerSonrisa.jpg" alt="Dager Barbon tomando una bebida">
+            <img src="imagen/DagerBebiendo2.jpg" alt="Dager Barbon disfrutando una bebida">
+            <img src="imagen/DagerMascara.png" alt="Dager Barbon comiendo">
+            <img src="imagen/DagerTocando.jpg" alt="Dager Barbon tocando guitarra">
+          </section>
+  
+          <video autoplay muted loop class="about-video">
+            <source src="Gato.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+          </video> 
 
-  <!-- Sección: Contacto -->
-  <section id="contact">
-    <h2>Contáctame</h2>
-    <form>
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu correo" required>
-      <textarea rows="5" placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+    
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Skills -->
+    <section id="habilidades">
+      <h3>Skills</h3>
+      <div class="skills">
+        <div class="skill-category">
+          <h1>Front-end</h1>
+          <div class="elemento">HTML</div>
+          <div class="elemento">CSS</div>
+          <div class="elemento">JavaScript</div>
+        </div>
+        <div class="skill-category">
+          <h1>Frameworks</h1>
+          <div class="elemento">React.js</div>
+          <div class="elemento">Angular</div>
+          <div class="elemento">Vue.js</div>
+        </div>
+        <div class="skill-category">
+          <h1>Back-end</h1>
+          <div class="elemento">Node.js</div>
+          <div class="elemento">Laravel</div>
+          <div class="elemento">Django</div>
+        </div>
+        <div class="skill-category">
+          <h1>Bases de datos</h1>
+          <div class="elemento">MySQL</div>
+          <div class="elemento">PostgreSQL</div>
+          <div class="elemento">Firebase</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sección: Contacto -->
+    <section id="contact">
+      <h2>Contáctame</h2>
+      <div class="contact-links">
+        <a href="https://github.com/MarianoVilla" aria-label="Visita mi GitHub">
+          GitHub <img src="imagen/GitHub.png" alt="Logotipo de GitHub">
+        </a>
+        <a href="https://www.youtube.com/@DotDager" aria-label="Visita mi canal de YouTube">
+          YouTube <img src="imagen/Youtube.png" alt="Logotipo de YouTube">
+        </a>
+        <a href="https://www.instagram.com/dager.32/" aria-label="Visita mi Instagram">
+          Instagram <img src="imagen/Instagram.png" alt="Logotipo de Instagram">
+        </a>
+        <a href="https://www.twitch.tv/dagerxiv" aria-label="Visita mi Twitch">
+          Twitch <img src="imagen/Twitch.png" alt="Logotipo de Twitch">
+        </a>
+        <a href="https://discord.com/invite/4NFk6TamAB" aria-label="Únete a mi Discord">
+          Discord <img src="imagen/Discord.png" alt="Logotipo de Discord">
+        </a>
+      </div>
+    </section>
+  </main>
 
   <!-- Pie de página -->
   <footer>
     <p>© 2024 Dot Dager. Todos los derechos reservados.</p>
+    <p class="recordatorio">No olvides hacer clic en los pepinos.</p>
   </footer>
 </body>
 </html>
